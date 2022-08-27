@@ -1,4 +1,3 @@
-
 interface IHorizontalBarProps {
   /** Provide the body element to override all markup in the horizontal bar element (disables all body content related props) */
   bodyContent?: JSX.Element

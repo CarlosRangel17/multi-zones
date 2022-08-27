@@ -12,13 +12,11 @@ interface Props {
   [rest: string]: unknown // ...rest property
 }
 
-const Navigation: FunctionComponent<Props> = ({ horizontalBarProps, verticalBarProps, ...rest }) => {
-  return (
-    <>
-      <HorizontalBar {...horizontalBarProps} {...rest} />
-      <VerticalBar activeNavOption={verticalBarProps?.activeNavOption || 'Home'} {...verticalBarProps} {...rest} />
-    </>
-  )
-}
+const Navigation: FunctionComponent<Props> = ({ horizontalBarProps, verticalBarProps, ...rest }) => (
+  <>
+    <HorizontalBar {...horizontalBarProps} {...rest} />
+    <VerticalBar activeNavOption={verticalBarProps?.activeNavOption || 'Home'} {...verticalBarProps} {...rest} />
+  </>
+)
 
 export default Navigation

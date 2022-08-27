@@ -8,7 +8,7 @@ interface Props extends INavOption {
 }
 
 const NavOption: FunctionComponent<Props> = ({ destination, icon, title, selected }) => (
-  <a href={destination} className={clsx(styles.navOption, selected && styles.active)}>
+  <a className={clsx(styles.navOption, selected && styles.active)} href={destination}>
     <span className={styles.icon}>{icon}</span>
     <span className={styles.title}>{title}</span>
   </a>

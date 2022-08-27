@@ -1,5 +1,5 @@
-import IAvatarDetail from "./avatar"
-import INavOption from "./navOption"
+import IAvatarDetail from './avatar'
+import INavOption from './navOption'
 
 interface IVerticalBarProps {
   /** Active nav option, should be a title of the nav options */

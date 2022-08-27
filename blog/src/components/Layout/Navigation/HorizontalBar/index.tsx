@@ -7,9 +7,9 @@ import styles from './horizontalBar.module.scss'
 const HorizontalBar: FunctionComponent<IHorizontalBarProps> = ({
   bodyContent,
   fixed = false,
-  searchFormClass,
+  // searchFormClass,
   wrapperClass,
-  handleSearchSubmit,
+  // handleSearchSubmit,
   ...rest
 }) => {
   const horizontalClasses = clsx(styles.horizontal, fixed && styles.fixed, wrapperClass)

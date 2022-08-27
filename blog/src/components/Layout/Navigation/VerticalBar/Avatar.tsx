@@ -11,10 +11,11 @@ interface Props extends IAvatarDetail {}
 const getInitials = (fullName: string) => {
   const allNames = fullName.trim().split(' ')
   const initials = allNames.reduce((acc, curr, index) => {
+    let previousValue = acc
     if (index === 0 || index === allNames.length - 1) {
-      acc = `${acc}${curr.charAt(0).toUpperCase()}`
+      previousValue = `${previousValue}${curr.charAt(0).toUpperCase()}`
     }
-    return acc
+    return previousValue
   }, '')
   return initials
 }

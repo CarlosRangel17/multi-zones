@@ -37,12 +37,12 @@ const VerticalBar: FunctionComponent<IVerticalBarProps> = ({
     )
   }
 
+  const selectedNavOption =
+    lowerNavOptions?.concat(upperNavOptions || [])?.find((navOption) => navOption.title === activeNavOption) || null
+
   const mapNavOption = (navOption: INavOption) => (
     <NavOption key={navOption.title} selected={selectedNavOption?.title === navOption.title} {...navOption} />
   )
-
-  const selectedNavOption =
-    lowerNavOptions?.concat(upperNavOptions || [])?.find((navOption) => navOption.title === activeNavOption) || null
 
   const upperSectionClasses = clsx(styles.upperSection, upperSectionWrapperClass)
   const lowerSectionClasses = clsx(styles.lowerSection, lowerSectionWrapperClass)
