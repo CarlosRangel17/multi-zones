@@ -1,0 +1,77 @@
+@import '~styles/utils/variables.scss';
+
+.horizontal {
+  display: flex;
+  background: $primary-blue;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  height: 48px;
+  width: 100%;
+  z-index: 6;
+
+  &.fixed {
+    position: fixed;
+  }
+
+  justify-content: space-between;
+  padding: 8px 22px;
+  
+  a {
+    height: 42px;
+    width: 169px;
+    padding: 14px 12.55px 8px 15px;
+    border-radius: 0px 0px 8px 8px;
+  }
+
+  .searchField {
+    width: 360px;
+    height: 32px;
+    border: 1px solid $gray-3;
+    border-radius: 5px;
+    padding-left: 36px;
+  }
+
+  .searchFormIconWrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+  }
+
+  .searchFormSubmit {
+    width: 76px;
+    height: 32px !important;
+    background-color: $gray-3;
+    color: $gray-8;
+    border-radius: 50px;
+    border-color: transparent;
+    font-weight: 700;
+    font-size: 12px !important;
+    line-height: 16px;
+    padding: 8px 16px !important;
+  }
+
+  .searchFormSubmitWrapper {
+    right: -92px;
+  }
+
+  .settingsSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 126px;
+    height: 100%;
+
+    .userSection {
+      color: $white;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 400;
+
+      .name {
+        margin-right: 8px;
+      }
+    }
+  }
+}

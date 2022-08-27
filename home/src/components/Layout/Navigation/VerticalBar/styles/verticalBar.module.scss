@@ -1,0 +1,29 @@
+@import '~styles/utils/variables.scss';
+
+.vertical {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background: $white;
+  padding: 0;
+  height: 100%;
+  max-width: 84px;
+  width: 100%;;
+  font-size: 10px;
+  padding-top: 16px;
+
+  &.fixed {
+    position: fixed;
+  }
+
+  &.adjustForHorizontalBar {
+    height: calc(100% - 48px);
+    margin-top: 48px;
+  }
+
+  .upperSection,
+  .lowerSection {
+    display: flex;
+    flex-flow: column;
+  }
+}
