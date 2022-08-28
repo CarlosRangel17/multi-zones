@@ -1,6 +1,6 @@
 const { NEXT_PUBLIC_ENV_BASE = 'production' } = process.env
 console.log('NEXT_PUBLIC_ENV_BASE', NEXT_PUBLIC_ENV_BASE)
-const base = NEXT_PUBLIC_ENV_BASE === 'production' ? 'www' : 'dev'
+// const base = NEXT_PUBLIC_ENV_BASE === 'production' ? 'www' : 'dev'
 
 const getSiteUrl = (port) => {
   return  NEXT_PUBLIC_ENV_BASE === 'local' ? `http://localhost:${port}` : `https://multi-zones-blog.vercel.app`
