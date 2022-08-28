@@ -1,12 +1,12 @@
-const { NEXT_PUBLIC_ENV_BASE = 'production' } = process.env
+const { NEXT_PUBLIC_ENV_BASE = 'production', BLOG_SITE_URL } = process.env
 console.log('NEXT_PUBLIC_ENV_BASE', NEXT_PUBLIC_ENV_BASE)
 // const base = NEXT_PUBLIC_ENV_BASE === 'production' ? 'www' : 'dev'
 
-const getSiteUrl = (port) => {
-  return  NEXT_PUBLIC_ENV_BASE === 'local' ? `http://localhost:${port}` : `https://multi-zones-blog.vercel.app`
+const getSiteUrl = (port, url) => {
+  return  NEXT_PUBLIC_ENV_BASE === 'local' ? `http://localhost:${port}` : url
 }
 
-const BLOG_URL = getSiteUrl(port = 4000)
+const BLOG_URL = getSiteUrl(port = 4000, BLOG_SITE_URL)
 
 const ZONE_URLS = [
   {
