@@ -1,3 +1,14 @@
+# Multi Zones
+
+08-28-2022
+- Sample Multi Zone App, powered by Vercel
+
+ TABLE OF CONTENT
+---------------------------------------------------------------------------------------------------------------------
+- Using multiple zones
+- Resources
+----------------------------------------------------------------------------------------------------------------
+
 # Using multiple zones
 
 With Next.js you can use multiple apps as a single app using its [multi-zones feature](https://nextjs.org/docs/advanced-features/multi-zones). This is a custom example using the [boiler-nextjs app](https://github.com/CarlosRangel17/boiler-nextjs) that shows how to use it.
@@ -44,19 +55,46 @@ To deploy the apps to Vercel, we'll use [monorepos support](https://vercel.com/b
 
 To get started, push the example to GitHub/GitLab/Bitbucket and [import your repo to Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example). We're not interested in the root directory, so make sure to select the `blog` directory (do not start with `home`):
 
-![Import flow for blog app](docs/import-blog.jpg)
+_Import flow for blog app_
+
+<img width="468" alt="Screen Shot 2022-08-28 at 10 58 40 AM" src="https://user-images.githubusercontent.com/11052295/187083268-4163dfd4-9949-45c3-890f-f6891fad5635.png" alt="Import flow for blog app">
+
 
 Click continue and finish the import process. After that's done copy the domain URL that was assigned to your project, paste it on `home/.env`, and push the change to your repo:
 
 ```bash
 # Replace this URL with the URL of your blog app
-BLOG_URL="https://with-zones-blog.vercel.app"
+BLOG_URL="https://multi-zones-blog.vercel.app"
 ```
 
 Now we'll go over the [import flow](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) again using the same repo but this time select the `home` directory instead:
 
-![Import flow for home app](docs/import-home.jpg)
+_Import flow for home app_
+
+<img width="475" alt="Screen Shot 2022-08-28 at 10 56 56 AM" src="https://user-images.githubusercontent.com/11052295/187083187-5d55f1d6-2eb4-4748-9b65-fe21b6986ee1.png" alt="Import flow for home app">
+
 
 With the `home` app deployed you should now be able to see both apps running under the same domain!
 
 Any future commits to the repo will trigger a deployment to the connected Vercel projects. See the [blog post about monorepos](https://vercel.com/blog/monorepos) to learn more.
+
+## Resources
+
+NextJS - Multi Zones
+* https://nextjs.org/docs/advanced-features/multi-zones 
+* https://www.techomoro.com/multi-zones-combine-multiple-next-js-apps/ 
+
+The Evolution of SaaS Architecture - Monoliths, Micro Front-End, Jamstack
+* https://frontegg.com/guides/saas-architecture/the-evolution-of-saas-architecture 
+
+Micro-frontend with React and Next.js
+* https://blog.logrocket.com/micro-frontend-react-next-js/#advantages-micro-frontends 
+
+Micro-Frontends
+* https://www.novafutur.com/post/micro-frontends-solving-the-monolith-issue
+* https://www.novafutur.com/post/micro-frontends-solving-the-monolith-issue-part-2
+* https://blog.logrocket.com/taming-the-front-end-monolith-dbaede402c39/ 
+* https://levelup.gitconnected.com/micro-frontend-architecture-replacing-a-monolith-from-the-inside-out-61f60d2e14c1
+* https://martinfowler.com/articles/micro-frontends.html
+
+
